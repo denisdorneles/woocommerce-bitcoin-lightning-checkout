@@ -33,6 +33,63 @@ The Lightning checkout flow has been tested in the development environment, incl
 This demonstration does not represent an independent security audit or a certification for production use.
 
 
+## Bitcoin Lightning Payment Flow — Real Test
+
+A step-by-step visual demonstration of a successful Bitcoin Lightning payment integrated with WooCommerce.
+
+The screenshots are based on a real payment test performed on November 12, 2026.
+
+### 1. Bitcoin Checkout — Payment Selection
+
+Customers can select Bitcoin Lightning as a payment method directly in the WooCommerce checkout.
+
+![Bitcoin Lightning Checkout](./screenshots/01-checkout-overview.png)
+
+### 2. Lightning Invoice — QR Code & Payment Request
+
+The checkout generates a Lightning invoice displaying the payment amount in satoshis, QR code, wallet options, and expiration timer.
+
+![Lightning Payment Invoice](./screenshots/02-lightning-invoice.png)
+
+### 3. Lightning Payment — Merchant Wallet Receipt
+
+The merchant wallet confirms receipt of 1,186 sats, corresponding to the WooCommerce test transaction.
+
+![Lightning Wallet Receipt](./screenshots/03-wallet-receipt.png)
+
+### 4. WooCommerce — Order Confirmation
+
+After payment confirmation, the WooCommerce order page displays the payment as settled.
+
+![WooCommerce Order Confirmation](./screenshots/04-order-confirmation.png)
+
+### 5. WooCommerce Admin — Order Processing
+
+The administration panel records the successful Bitcoin Lightning payment and updates the order status to Processing.
+
+![WooCommerce Administration](./screenshots/05-woocommerce-admin.png)
+
+### 6. Lightning Payment — Automatic Settlement
+
+The WooCommerce order notes and payment metadata demonstrate automatic settlement recording.
+
+The payment and order updates occurred within the same recorded minute. The exact processing latency was not independently measured.
+
+![Lightning Payment Settlement](./screenshots/06-lightning-settlement.png)
+
+### Demonstration Notes
+
+- Real Bitcoin Lightning payment test.
+- Test order: #196.
+- Amount received: 1,186 sats.
+- Payment infrastructure: Blink.
+- Platform: WordPress and WooCommerce.
+- Screenshots include English explanatory annotations and selected redactions.
+- Cryptographic payment verification is documented in the following section.
+
+---
+
+
 ## Verified Lightning Payment — Real Test
 
 ### Successful Bitcoin Lightning Payment
