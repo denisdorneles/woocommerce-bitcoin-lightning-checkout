@@ -1,5 +1,6 @@
-# ₿ Bitcoin & Lightning Checkout for WooCommerce
+# ₿ Bitcoin Lightning Checkout for WooCommerce
 
+**Bitcoin Payments via Lightning Network | WooCommerce | Blink Integration**
 **Payment Integration | WordPress | WooCommerce | Lightning Network**
 
 A practical e-commerce payment integration project demonstrating Bitcoin payments via the Lightning Network using WooCommerce and Blink.
