@@ -32,6 +32,72 @@ The Lightning checkout flow has been tested in the development environment, incl
 
 This demonstration does not represent an independent security audit or a certification for production use.
 
+
+## Verified Lightning Payment — Real Test
+
+### Successful Bitcoin Lightning Payment
+
+A real Bitcoin Lightning Network payment was successfully completed during a WooCommerce checkout test on November 12, 2026.
+
+**Payment Information**
+
+| Field | Value |
+|---|---|
+| Network | Bitcoin Lightning Network |
+| Amount | 1,186 sats |
+| Merchant receipt | R$ 4.76 BRL |
+| WooCommerce test order | #196 |
+| Payment reference | GW-196 |
+| Date | November 12, 2026 |
+| Merchant receipt status | Received |
+| WooCommerce order status | Payment settled |
+
+### Cryptographic Proof of Payment
+
+The following payment preimage and payment hash were obtained from the merchant's Lightning payment receipt.
+
+**Payment Hash**
+
+```text
+019220361f49fdf66d4a92ae007dac551844bd6dbee296ec44e9ccf15d916a27
+```
+
+**Payment Preimage**
+
+```text
+79df64b404224cbea55548cfbb7de312768001e0d6a43940851be465ac1fbd46
+```
+
+### Independent Verification
+
+Anyone can verify the cryptographic relationship by calculating the SHA-256 hash of the 32-byte payment preimage.
+
+```python
+import hashlib
+
+preimage = "79df64b404224cbea55548cfbb7de312768001e0d6a43940851be465ac1fbd46"
+
+result = hashlib.sha256(bytes.fromhex(preimage)).hexdigest()
+
+print(result)
+```
+
+**Expected result:**
+
+```text
+019220361f49fdf66d4a92ae007dac551844bd6dbee296ec44e9ccf15d916a27
+```
+
+**Verification result:** SHA-256 preimage and payment hash match.
+
+This is cryptographic evidence of the disclosed Lightning payment preimage. Together with the merchant receipt and WooCommerce screenshots, it documents the tested payment flow.
+
+Lightning payments are not individually recorded as public on-chain transactions, so this payment cannot be looked up using a conventional Bitcoin blockchain transaction explorer.
+
+This verification does not independently authenticate the payer, the merchant account, or the security of the entire checkout implementation.
+
+---
+
 ## Technologies
 
 - WordPress
